@@ -1,1 +1,2 @@
-# ELECTRIC-GRID-IN-A-TOWN-
+# ELECTRIC-GRID-IN-A-TOWN-Lets take a situation where we have a city which has so many towns in it, and the distances between pairs of the town are known. The goal is to create a system of electric power lines that would minimize the total distance (and thus the construction cost), yet reach every town. 
+The problem which we chose comes under the domain of GREEDY METHOD. Greedy is an algorithmic paradigm that builds up a solution piece by piece, always choosing the next piece that offers the most obvious and immediate benefit
