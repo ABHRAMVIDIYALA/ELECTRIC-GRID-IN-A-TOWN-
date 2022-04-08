@@ -1,0 +1,23 @@
+import boruvkas
+import networkx as nx
+import random
+import graph
+
+def MST_problem(n):
+    weightsvector = random.sample(range(1,100), 25)
+    weightindex = 0
+    G = nx.Graph()
+    G.edges_with_weight = []
+    for i in range(n):
+        for j in range(i+1, n):
+            weight = weightsvector[weightindex]
+            G.add_edge(i, j, weight=weight)
+            G.edges_with_weight.append((i,j,weight))
+            weightindex += 1
+    A = boruvkas.BoruvkasAlgorithm(G)
+    graph.display(G)
+    A.find_MST()
+    graph.display(G, path=A.cheapest_nodes)
+
+if name == "main":
+    MST_problem(4)
