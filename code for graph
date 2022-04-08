@@ -1,0 +1,15 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+
+def display(G, path=None):
+    pos = nx.spring_layout(G)
+    nx.draw(G, pos, node_color='k')
+    nx.draw_networkx_labels(G, pos, font_size=20)
+    if path is not None:
+        nx.draw_networkx_edges(G, pos, edgelist=path, width=6, edge_color='r')
+    else:
+        nx.draw_networkx_edges(G, pos, width=1)
+    nx.draw_networkx_edge_labels(G, pos, font_size=10)
+    plt.axis('off')
+    plt.plot(weight=True)
+    plt.show()
